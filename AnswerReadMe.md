@@ -271,12 +271,44 @@ $ git commit -m "Updated project readme"
 
 $ git push
 ```
-### Exercise 4 
+
+
+### Exercise 4 Local vs. Remote Branches:
 ``` bash
+remote branches
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+git push origin --delete <branch_name> (cant run this code bcs it will mess up my things)
+git checkout -b hotfix/patch-1 origin/hotfix/patch-1
+$ git fetch
+
 ```
-### Exercise 5 
+
+
+### Exercise 5 Branch Deletion:
 ``` bash
+$ git branch
+  feature-102
+  ft/branch
+  ft/new-feature
+* main
+$ git branch -d ft/new-feature
+error: the branch 'ft/new-feature' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D ft/new-feature'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+
+$ git branch -D ft/new-feature
+Deleted branch ft/new-feature (was 229466c).
+
+$ git branch
+  feature-102
+  ft/branch
+* main
+git push origin --delete <branch_name> (cant run this code bcs it will mess up my things)
 ```
+
+
 ### Exercise 6 Creating a Branch from a Commit:
 ```bash
 coding/git_advanced (main)
